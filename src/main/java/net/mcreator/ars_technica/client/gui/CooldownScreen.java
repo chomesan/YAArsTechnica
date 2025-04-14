@@ -4,7 +4,7 @@ import net.createmod.catnip.gui.AbstractSimiScreen;
 import com.simibubi.create.foundation.gui.AllIcons;
 import com.simibubi.create.foundation.gui.widget.IconButton;
 import com.simibubi.create.foundation.gui.widget.ScrollInput;
-import net.createmod.catnip.lang.Lang;
+import net.mcreator.ars_technica.common.util.Lang;
 import net.mcreator.ars_technica.common.gui.AllGuiTextures;
 import net.mcreator.ars_technica.common.gui.RenderableScrollInput;
 import net.mcreator.ars_technica.common.helpers.CooldownHelper;

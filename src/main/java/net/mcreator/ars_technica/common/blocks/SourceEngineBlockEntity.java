@@ -12,7 +12,7 @@ import com.simibubi.create.foundation.blockEntity.behaviour.BlockEntityBehaviour
 import com.simibubi.create.foundation.blockEntity.behaviour.ValueBoxTransform;
 import com.simibubi.create.foundation.blockEntity.behaviour.scrollValue.ScrollValueBehaviour;
 import net.createmod.catnip.math.AngleHelper;
-import net.createmod.catnip.lang.Lang;
+import net.mcreator.ars_technica.common.util.Lang;
 import net.createmod.catnip.math.VecHelper;
 import net.mcreator.ars_technica.ConfigHandler;
 import net.mcreator.ars_technica.init.ArsTechnicaModSounds;

@@ -2,7 +2,7 @@ package net.mcreator.ars_technica.mixin;
 
 import com.hollingsworth.arsnouveau.common.block.tile.RuneTile;
 import com.simibubi.create.api.equipment.goggles.IHaveGoggleInformation;
-import net.createmod.catnip.lang.Lang;
+import net.mcreator.ars_technica.common.util.Lang;
 import net.mcreator.ars_technica.ArsTechnicaMod;
 import net.mcreator.ars_technica.common.helpers.CooldownHelper;
 import net.minecraft.nbt.CompoundTag;
