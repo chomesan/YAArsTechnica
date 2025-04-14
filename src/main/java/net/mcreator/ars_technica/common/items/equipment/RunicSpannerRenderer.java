@@ -17,7 +17,8 @@ import net.minecraft.world.item.ItemStack;
 
 public class RunicSpannerRenderer extends CustomRenderedItemModelRenderer {
 
-    protected static final PartialModel GEAR = new PartialModel(new ResourceLocation(ArsTechnicaMod.MODID, "item/arcane_gear"));
+    protected static final PartialModel GEAR =
+            PartialModel.of(new ResourceLocation(ArsTechnicaMod.MODID, "item/arcane_gear"));
 
     @Override
     protected void render(ItemStack stack, CustomRenderedItemModel model, PartialItemModelRenderer renderer, ItemDisplayContext transformType,
