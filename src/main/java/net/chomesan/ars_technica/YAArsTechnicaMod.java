@@ -45,10 +45,10 @@ import java.util.ArrayList;
 import java.util.AbstractMap;
 
 
-@Mod("ars_technica")
+@Mod("ya_ars_technica")
 public class YAArsTechnicaMod {
 	public static final Logger LOGGER = LogManager.getLogger(YAArsTechnicaMod.class);
-	public static final String MODID = "ars_technica";
+	public static final String MODID = "ya_ars_technica";
 
 	public YAArsTechnicaMod() {
 		MinecraftForge.EVENT_BUS.register(this);
