@@ -152,7 +152,7 @@ public class WhirlEntity extends Entity implements IAirCurrentSource, GeoEntity 
 
     @Override
     protected void defineSynchedData() {
-        this.entityData.define(PROCESSOR_TYPE, AllFanProcessingTypes.NONE.toString());
+        this.entityData.define(PROCESSOR_TYPE, "NONE");
         this.entityData.define(SPEED, 0.05f);
         this.entityData.define(RADIUS, 1.5f);
     }

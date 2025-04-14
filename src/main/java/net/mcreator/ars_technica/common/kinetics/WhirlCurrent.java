@@ -76,7 +76,7 @@ public class WhirlCurrent {
 
             entity.hurtMarked = true;
 
-            if (processingType == AllFanProcessingTypes.NONE)
+            if (processingType == null)
                 continue;
 
             if (entity instanceof ItemEntity itemEntity) {
@@ -136,7 +136,7 @@ public class WhirlCurrent {
     }
 
     private void sendWhirlParticles(List<ServerPlayer> players, FanProcessingType processingType) {
-        if (processingType == AllFanProcessingTypes.NONE) {
+        if (processingType == null) {
             return;
         }
         ParticleColor color = ParticleColor.WHITE;

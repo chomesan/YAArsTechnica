@@ -83,7 +83,7 @@ public class EffectWhirl extends AbstractEffect {
         double durationAmplifier = spellStats.getDurationMultiplier();
         int extraDurationTicks = Math.toIntExact(Math.round(durationAmplifier * 40));
 
-        FanProcessingType processingType = AllFanProcessingTypes.NONE;
+        FanProcessingType processingType = null;
 
         if (spellContext.hasNextPart()) {
             while (spellContext.hasNextPart()) {
