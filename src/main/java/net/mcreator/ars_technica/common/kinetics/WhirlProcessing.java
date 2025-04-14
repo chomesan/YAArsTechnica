@@ -5,18 +5,24 @@ import com.simibubi.create.content.kinetics.fan.processing.*;
 import com.simibubi.create.content.processing.recipe.ProcessingOutput;
 import com.simibubi.create.content.processing.recipe.ProcessingRecipe;
 import com.simibubi.create.infrastructure.config.AllConfigs;
+import it.unimi.dsi.fastutil.objects.Reference2ObjectOpenHashMap;
 import net.mcreator.ars_technica.ArsTechnicaMod;
 import net.mcreator.ars_technica.common.helpers.RecipeHelpers;
 import net.mcreator.ars_technica.common.helpers.SpellResolverHelpers;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 public class WhirlProcessing extends FanProcessing {
+
+    private static final Map<FanProcessingType, ResourceLocation> IDS = new Reference2ObjectOpenHashMap<>();
 
     public static boolean applyProcessing(ItemEntity entity, FanProcessingType type, Level world, SpellResolver whirlOwner) {
         double processingBoost = 0.0;
@@ -88,7 +94,7 @@ public class WhirlProcessing extends FanProcessing {
         CompoundTag processing = createData.getCompound("Processing");
 
         if (!processing.contains("Type") || AllFanProcessingTypes.parseLegacy(processing.getString("Type")) != type) {
-            processing.putString("Type", FanProcessingTypeRegistry.getIdOrThrow(type).toString());
+            processing.putString("Type", getIdOrThrow(type).toString());
             int timeModifierForStackSize = ((entity.getItem().getCount() - 1) / 16) + 1;
             int baseProcessingTime = (int) (AllConfigs.server().kinetics.fanProcessingTime.get() * timeModifierForStackSize) + 1;
 
@@ -99,5 +105,18 @@ public class WhirlProcessing extends FanProcessing {
         int value = processing.getInt("Time") - 1;
         processing.putInt("Time", value);
         return value;
+    }
+
+    @Nullable
+    public static ResourceLocation getId(FanProcessingType type) {
+        return IDS.get(type);
+    }
+
+    public static ResourceLocation getIdOrThrow(FanProcessingType type) {
+        ResourceLocation id = getId(type);
+        if (id == null) {
+            throw new IllegalArgumentException("Could not get id for FanProcessingType " + type + "!");
+        }
+        return id;
     }
 }
