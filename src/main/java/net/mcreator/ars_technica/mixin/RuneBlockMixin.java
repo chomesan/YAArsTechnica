@@ -3,7 +3,7 @@ package net.mcreator.ars_technica.mixin;
 import com.hollingsworth.arsnouveau.common.block.RuneBlock;
 import com.hollingsworth.arsnouveau.common.block.tile.RuneTile;
 import com.simibubi.create.content.equipment.wrench.IWrenchable;
-import com.simibubi.create.foundation.gui.ScreenOpener;
+import net.createmod.catnip.gui.ScreenOpener;
 import net.mcreator.ars_technica.client.gui.RuneTileScreen;
 import net.mcreator.ars_technica.common.items.equipment.RunicSpanner;
 import net.minecraft.client.player.LocalPlayer;

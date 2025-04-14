@@ -1,13 +1,13 @@
 package net.mcreator.ars_technica.common.blocks;
 
-import com.jozufozu.flywheel.backend.Backend;
+import dev.engine_room.flywheel.backend.Backends;
 import com.mojang.blaze3d.vertex.PoseStack;
 
 import com.simibubi.create.content.kinetics.base.IRotate;
 import com.simibubi.create.content.kinetics.base.KineticBlockEntityRenderer;
-import com.simibubi.create.foundation.render.CachedBufferer;
-import com.simibubi.create.foundation.render.SuperByteBuffer;
-import com.simibubi.create.foundation.utility.AnimationTickHolder;
+import net.createmod.catnip.render.CachedBuffers;
+import net.createmod.catnip.render.SuperByteBuffer;
+import net.createmod.catnip.animation.AnimationTickHolder;
 import net.mcreator.ars_technica.ArsTechnicaMod;
 import net.mcreator.ars_technica.client.AllPartialModels;
 import net.minecraft.client.renderer.MultiBufferSource;

@@ -3,7 +3,7 @@ package net.mcreator.ars_technica.common.blocks;
 import com.hollingsworth.arsnouveau.common.block.Relay;
 import com.hollingsworth.arsnouveau.common.block.tile.RelayTile;
 import com.hollingsworth.arsnouveau.setup.registry.BlockRegistry;
-import com.simibubi.create.foundation.gui.ScreenOpener;
+import net.createmod.catnip.gui.ScreenOpener;
 import net.mcreator.ars_technica.client.gui.RelayTileScreen;
 import net.mcreator.ars_technica.common.helpers.mixins.IArsTechnicaWrenchAdjustable;
 import net.minecraft.client.player.LocalPlayer;

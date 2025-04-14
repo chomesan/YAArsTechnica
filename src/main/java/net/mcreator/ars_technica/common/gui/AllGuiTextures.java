@@ -1,14 +1,14 @@
 package net.mcreator.ars_technica.common.gui;
 
 import com.mojang.blaze3d.systems.RenderSystem;
-import com.simibubi.create.foundation.gui.UIRenderHelper;
-import com.simibubi.create.foundation.gui.element.ScreenElement;
+import net.createmod.catnip.gui.UIRenderHelper;
+import net.createmod.catnip.gui.element.ScreenElement;
 import net.mcreator.ars_technica.ArsTechnicaMod;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
-import com.simibubi.create.foundation.utility.Color;
+import net.createmod.catnip.theme.Color;
 
 public enum AllGuiTextures implements ScreenElement {
     SOURCE_MOTOR_SCREEN("source_motor_screen",235, 99);

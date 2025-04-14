@@ -1,8 +1,8 @@
 package net.mcreator.ars_technica;
 
 
-import com.simibubi.create.content.kinetics.BlockStressDefaults;
-import com.simibubi.create.foundation.utility.Couple;
+import com.simibubi.create.api.stress.BlockStressValues;
+import net.createmod.catnip.data.Couple;
 import net.mcreator.ars_technica.client.AllPartialModels;
 import net.mcreator.ars_technica.common.items.equipment.SpyMonocleCurioRenderer;
 import net.mcreator.ars_technica.recipe.ConfigRecipeCondition;

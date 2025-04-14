@@ -1,10 +1,10 @@
 package net.mcreator.ars_technica.client.gui;
 
-import com.simibubi.create.foundation.gui.AbstractSimiScreen;
+import net.createmod.catnip.gui.AbstractSimiScreen;
 import com.simibubi.create.foundation.gui.AllIcons;
 import com.simibubi.create.foundation.gui.widget.IconButton;
 import com.simibubi.create.foundation.gui.widget.ScrollInput;
-import com.simibubi.create.foundation.utility.Lang;
+import net.createmod.catnip.lang.Lang;
 import net.mcreator.ars_technica.common.packets.ConfigureSourceEnginePacket;
 import net.mcreator.ars_technica.common.blocks.SourceEngineBlockEntity;
 import net.mcreator.ars_technica.common.gui.AllGuiTextures;

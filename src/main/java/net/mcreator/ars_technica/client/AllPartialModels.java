@@ -1,6 +1,6 @@
 package net.mcreator.ars_technica.client;
 
-import com.jozufozu.flywheel.core.PartialModel;
+import dev.engine_room.flywheel.lib.model.baked.PartialModel;
 import net.mcreator.ars_technica.ArsTechnicaMod;
 import net.minecraft.resources.ResourceLocation;
 
