@@ -26,7 +26,7 @@ public class SourceEngineRenderer extends KineticBlockEntityRenderer<SourceEngin
 
     @Override
     protected SuperByteBuffer getRotatedModel(SourceEngineBlockEntity be, BlockState state) {
-        return CachedBufferer.partialFacing(AllPartialModels.ARCANE_SHAFT_HALF, state);
+        return CachedBuffers.partialFacing(AllPartialModels.ARCANE_SHAFT_HALF, state);
     }
 
     @Override
