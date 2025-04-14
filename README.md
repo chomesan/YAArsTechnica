@@ -1,6 +1,6 @@
 Version 0.0.2
 
-OWN YOUR RISK!
+AT YOUR OWN RISK!
 
 ワールドが壊れてもchomesan、開発者は一切の責任を負いません。
 
