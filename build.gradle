@@ -24,7 +24,7 @@ apply plugin: 'org.parchmentmc.librarian.forgegradle'
 apply plugin: 'org.spongepowered.mixin'
 
 version = "${mc_version}-${mod_version}"
-group = 'net.mcreator.ars_technica'
+group = 'net.chomesan.ars_technica'
 
 base {
     archivesBaseName = 'ars_technica'
