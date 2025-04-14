@@ -1,5 +1,6 @@
 package net.mcreator.ars_technica.common.blocks;
 
+import com.simibubi.create.content.kinetics.base.KineticBlockEntity;
 import dev.engine_room.flywheel.backend.Backends;
 import com.mojang.blaze3d.vertex.PoseStack;
 
@@ -42,10 +43,16 @@ public class SourceEngineRenderer extends KineticBlockEntityRenderer<SourceEngin
             float angle = getAngleForTe(be, be.getBlockPos(), axis);
             SuperByteBuffer shaft = getRotatedModel(be, state);
             shaft.light(light);
-            shaft.rotateCentered(Direction.get(Direction.AxisDirection.POSITIVE, axis), angle);
+            shaft.rotateCentered(angle, Direction.get(Direction.AxisDirection.POSITIVE, axis));
             shaft.renderInto(poseStack, bufferSource.getBuffer(RenderType.translucent()));
         }
 
+    }
+    public static float getAngleForTe(KineticBlockEntity be, final BlockPos pos, Direction.Axis axis) {
+        float time = AnimationTickHolder.getRenderTime(be.getLevel());
+        float offset = getRotationOffsetForPosition(be, pos, axis);
+        float angle = ((time * be.getSpeed() * 3f / 10 + offset) % 360) / 180 * (float) Math.PI;
+        return angle;
     }
 
 }
