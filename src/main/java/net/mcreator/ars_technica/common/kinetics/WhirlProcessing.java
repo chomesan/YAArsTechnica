@@ -1,11 +1,11 @@
 package net.mcreator.ars_technica.common.kinetics;
 
 import com.hollingsworth.arsnouveau.api.spell.SpellResolver;
+import com.simibubi.create.api.registry.CreateBuiltInRegistries;
 import com.simibubi.create.content.kinetics.fan.processing.*;
 import com.simibubi.create.content.processing.recipe.ProcessingOutput;
 import com.simibubi.create.content.processing.recipe.ProcessingRecipe;
 import com.simibubi.create.infrastructure.config.AllConfigs;
-import it.unimi.dsi.fastutil.objects.Reference2ObjectOpenHashMap;
 import net.mcreator.ars_technica.ArsTechnicaMod;
 import net.mcreator.ars_technica.common.helpers.RecipeHelpers;
 import net.mcreator.ars_technica.common.helpers.SpellResolverHelpers;
@@ -21,8 +21,6 @@ import java.util.Map;
 import java.util.Optional;
 
 public class WhirlProcessing extends FanProcessing {
-
-    private static final Map<FanProcessingType, ResourceLocation> IDS = new Reference2ObjectOpenHashMap<>();
 
     public static boolean applyProcessing(ItemEntity entity, FanProcessingType type, Level world, SpellResolver whirlOwner) {
         double processingBoost = 0.0;
@@ -107,13 +105,8 @@ public class WhirlProcessing extends FanProcessing {
         return value;
     }
 
-    @Nullable
-    public static ResourceLocation getId(FanProcessingType type) {
-        return IDS.get(type);
-    }
-
     public static ResourceLocation getIdOrThrow(FanProcessingType type) {
-        ResourceLocation id = getId(type);
+        ResourceLocation id = CreateBuiltInRegistries.FAN_PROCESSING_TYPE.getKey(type);
         if (id == null) {
             throw new IllegalArgumentException("Could not get id for FanProcessingType " + type + "!");
         }
